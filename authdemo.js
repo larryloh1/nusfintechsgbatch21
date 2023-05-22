@@ -19,7 +19,7 @@ app.use(
   })
 );
 
-// req.isAuthenticated is provided from the auth router
+// req.isAuthenticated is provided from the auth router.
 app.get('/', (request, response) => {
   response.send(request.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
 });
