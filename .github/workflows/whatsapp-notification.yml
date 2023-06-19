@@ -1,0 +1,13 @@
+name: When a push occurs in the master branch, a private message is sent on the Whatsapp.
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: whatsapp-notify
+        run: echo 'Start!'
+        env:
+          account_sid: AC7eb115e3a827e895f535029cab2ba7ba
+          auth_token: 56b0eede3ed997df474aa82d5d0d54f1
+          to_whatsapp_no: +6566971103 
